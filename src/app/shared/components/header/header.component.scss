@@ -1,0 +1,53 @@
+@use "../../../styles/spacing";
+
+header {
+  width: 100%;
+  background: url("../../../../assets/img/rip.svg") bottom;
+  background-size: 100%;
+  margin-bottom: spacing.$default-base-spacing * 4;
+  padding-bottom: spacing.$default-base-spacing * 5;
+  padding-top: spacing.$default-base-spacing * 2;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    ul {
+      li {
+        padding: spacing.$default-base-spacing;
+      }
+    }
+
+    .nav-left {
+      display: block;
+      justify-self: start;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+
+        #logo {
+          width:48px;
+          height: auto;
+        }
+      }
+    }
+
+    .nav-right {
+      display: block;
+      margin: 0;
+      padding: 0;
+      margin-left: auto;
+
+      li {
+        display: inline-block;
+        text-decoration: underline;
+        a {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

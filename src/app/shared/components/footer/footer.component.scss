@@ -1,0 +1,97 @@
+@use "../../../styles/spacing";
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  // background: url("../../../../assets/img/rip-rotated.svg") bottom;
+  padding-top: spacing.$default-base-spacing * 4;
+
+  .bottom-hero {
+    display: flex;
+
+    .col-left {
+      max-width: 400px;
+
+      h1 {
+        margin-bottom: spacing.$default-base-spacing * 3;
+      }
+
+      p {
+        margin-bottom: spacing.$default-base-spacing * 4;
+      }
+
+      .download-section {
+        img {
+          height: spacing.$default-base-spacing * 6;
+          margin-left: spacing.$default-base-spacing * 2;
+          cursor: pointer;
+        }
+        
+        #first-download {
+          margin: 0;
+        }
+      }
+    }
+
+    .col-right {
+      margin-left: auto;
+
+      h2 {
+        text-decoration: underline;
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          list-style: none;
+          padding-left: spacing.$default-base-spacing;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .bottom-section {
+    display: flex;
+
+    ul {
+      display: block;
+
+      li {
+        display: inline-block;
+        padding-left: spacing.$default-base-spacing * 2;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer {
+  
+    .bottom-hero {
+      flex-direction: column;
+    }
+
+    .col-right {
+      margin-top: 24px;
+      margin-left: 0!important;
+
+      ul {
+        display: block;
+        li {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

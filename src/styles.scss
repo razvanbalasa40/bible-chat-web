@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./app/styles/colors";
+@use "./app/styles/normalize.scss";
+@use "./app/styles/spacing";
+@use "./app/styles/typings";
+@use "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+html, body {
+  background-color: colors.$primary-color;
+  color: colors.$primary-text-color;
+
+  font-size: typings.$default-body-font-size;
+  // font-family: typings.$default-font-family;
+  font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: typings.$default-font-size-h1;
+}
+
+h2 {
+  font-size: typings.$default-font-size-h2;
+}
+
+p {
+  font-size: typings.$default-body-font-size;
+}
+
+a {
+  color: colors.$primary-text-color;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
