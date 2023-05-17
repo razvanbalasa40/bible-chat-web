@@ -6,19 +6,28 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import {
+  provideAnalytics,
+  getAnalytics,
+  ScreenTrackingService,
+  UserTrackingService,
+} from '@angular/fire/analytics';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { Auth, provideAuth, getAuth } from '@angular/fire/auth';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    FooterComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ScreenTrackingService, UserTrackingService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

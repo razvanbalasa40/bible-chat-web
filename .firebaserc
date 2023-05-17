@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "genericchatapp-4d046"
+  },
+  "targets": {
+    "genericchatapp-4d046": {
+      "hosting": {
+        "bible-chat-web": [
+          "genericchatapp-4d046"
+        ]
+      }
+    }
   }
 }

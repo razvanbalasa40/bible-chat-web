@@ -9,8 +9,23 @@
     display: flex;
     
     .left {
-      width: 60%;
+      width: 100%;
+      text-align: center;
       
+      img {
+        max-width: 300px;
+      }
+      
+      .download-section {
+        margin-top: spacing.$default-base-spacing * 6;
+        a {
+          img {
+            width: 200px;
+            height: auto!important;
+          }
+        }
+      }
+
       h1 {
         margin-bottom: spacing.$default-base-spacing * 2;
       }
@@ -190,7 +205,20 @@
 }
 
 .bottom-section {
-  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  img {
+    max-width: 200px;
+  }
+  
   background: url("../../assets/img/rip.svg") bottom;
 }
 
@@ -204,6 +232,12 @@
 
     .right {
       display: none;
+    }
+
+    .left {
+      p {
+        font-size: 18px;
+      }
     }
   }
 

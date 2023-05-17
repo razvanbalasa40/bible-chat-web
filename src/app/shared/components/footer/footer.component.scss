@@ -9,9 +9,16 @@ footer {
 
   .bottom-hero {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: spacing.$default-base-spacing * 4;
     .col-left {
-      max-width: 400px;
+      text-align: center;
+
+      img {
+        max-width: 200px;
+      }
 
       h1 {
         margin-bottom: spacing.$default-base-spacing * 3;
@@ -21,17 +28,6 @@ footer {
         margin-bottom: spacing.$default-base-spacing * 4;
       }
 
-      .download-section {
-        img {
-          height: spacing.$default-base-spacing * 6;
-          margin-left: spacing.$default-base-spacing * 2;
-          cursor: pointer;
-        }
-        
-        #first-download {
-          margin: 0;
-        }
-      }
     }
 
     .col-right {
@@ -56,21 +52,26 @@ footer {
       }
     }
   }
+
   .bottom-section {
     display: flex;
 
-    ul {
-      display: block;
-      margin: 0;
-      margin-top: 8px;
+    nav {
+      margin-left: auto;
 
-      li {
-        display: inline-block;
-        padding-left: spacing.$default-base-spacing * 2;
+      ul {
+        display: block;
+        margin: 0;
+        margin-top: 8px;
 
-        &:hover {
-          text-decoration: underline;
-          cursor: pointer;
+        li {
+          display: inline-block;
+          padding-left: spacing.$default-base-spacing * 2;
+
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
     }
