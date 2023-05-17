@@ -5,8 +5,8 @@ header {
   background: url("../../../../assets/img/rip.svg") bottom;
   background-size: 100%;
   margin-bottom: spacing.$default-base-spacing * 4;
-  padding-bottom: spacing.$default-base-spacing * 5;
-  padding-top: spacing.$default-base-spacing * 2;
+  padding-bottom: spacing.$default-base-spacing * 4;
+  padding-top: spacing.$default-base-spacing;
 
   nav {
     display: flex;
@@ -14,6 +14,10 @@ header {
     width: 100%;
     
     ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       li {
         padding: spacing.$default-base-spacing;
       }
@@ -29,7 +33,7 @@ header {
         display: inline-block;
 
         #logo {
-          width:48px;
+          width:60px;
           height: auto;
         }
       }

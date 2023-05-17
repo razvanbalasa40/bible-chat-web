@@ -4,12 +4,26 @@
 .hero-section {
   margin-top: 60px;
   margin-bottom: 60px;
+
   .container {
     display: flex;
     
     .left {
-      width: 70%;
+      width: 60%;
       
+      h1 {
+        margin-bottom: spacing.$default-base-spacing * 2;
+      }
+
+      h2 {
+        margin-bottom: spacing.$default-base-spacing * 2;
+      }
+
+      p {
+        margin-bottom: spacing.$default-base-spacing * 6;
+        font-size: 24px;
+      }
+
       .download-section {
         img {
           height: spacing.$default-base-spacing * 6;
@@ -25,7 +39,6 @@
 
     .right {
       margin-left: auto;
-      margin-right: auto;
 
       img {
         max-width: 300px;
@@ -37,44 +50,73 @@
 .content-section {
 
   background-color: white;
-  background-image: linear-gradient(180deg, #fff4e7, white);
+  background-image: linear-gradient(180deg, #fff4e7, #e2edff);
 
   article {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 400px;
+    // justify-content: center;
+    // align-items: center;
+    // max-width: 400px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     padding-bottom: spacing.$default-base-spacing * 8;
-      
+    
+    .article-top {
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: spacing.$default-base-spacing * 6;
+    }
+    
+    .article-content {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      gap: spacing.$default-base-spacing * 12;
+
+      .article-col {
+        display: flex;
+        flex-direction: column;
+
+        .article-images {
+          
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: auto;
+          margin-bottom: auto;
+
+          .article-img {     
+            max-width: 300px;
+            margin-bottom: spacing.$default-base-spacing * 8;
+          }
+
+          .article-download {
+            max-width: 200px;
+          }
+        }
+
+        .subarticle {
+          padding-bottom: spacing.$default-base-spacing * 6;
+          max-width: 480px;
+        }
+      }
+    }
 
     .article-header {
       // text-decoration: underline;
       font-weight: 700;
     }
 
-    img {
-      max-width: 300px;
-    }
-
-    &:after {
-      content:"\A";
-      width:20px;
-      height:20px;
-      border-radius:50%;
-      background: #38332A;
-      display:inline-block;
-      margin-top: 20px;
-    }
   }
 }
 
 .testimonials-section {
 
-  background-color: white;
+  background-image: linear-gradient(180deg, #e2edff, #fff);
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -172,6 +214,30 @@
 
     .snip1533 {
       max-width: 310px;
+    }
+  }
+
+  .content-section {
+    article {
+      
+      .article-top {
+        max-width: 100%;
+      }
+
+      .article-content {
+        flex-direction: column;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        .article-col {
+          .article-img {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
     }
   }
 }
