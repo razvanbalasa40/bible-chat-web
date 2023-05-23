@@ -16,6 +16,7 @@ import {
 } from '@angular/fire/analytics';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { Auth, provideAuth, getAuth } from '@angular/fire/auth';
+import { GtagModule } from 'angular-gtag';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent],
@@ -26,6 +27,7 @@ import { Auth, provideAuth, getAuth } from '@angular/fire/auth';
     provideAnalytics(() => getAnalytics()),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
+    GtagModule.forRoot({ trackingId: 'G-JW3BEGLW0Y', trackPageviews: true }),
   ],
   providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],

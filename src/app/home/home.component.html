@@ -1,108 +1,152 @@
+
 <div class="hero-section">
-  <div class="container">
-    <div class="left">
-      <h1>Guide Your Spirituality With the Power of AI</h1>
-      <p>Use our AI Bible Study App to go beyond the conventional understanding of religion and faith. <br>Chat with your AI-powered religion guide to discover even the deepest spiritual secrets.</p>
-      <img src="assets/img/Prayer.png" alt="">
-      
-      <div class="download-section">
-        <a href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666"><img src="assets/img/download-app-store-2x.webp" alt="Download on the app store" id="first-download"></a>
-        <!-- <a href="https://www.apple.com/app-store/"><img src="assets/img/download-playstore-2x-1.webp" alt="Get it on Google Play"></a> -->
+
+  <div class="top">
+    <div class="header">
+      <img src="assets/img/bible-study-icon.png" alt="Bible chat icon" width="128px" height="128px">
+    </div>
+    <div class="content">
+      <div class="col" id="left">
+        <h2>Go beyond the conventional<br>understanding of religion<br>and faith</h2>
+      </div>
+      <div class="col" id="middle">
+        <img src="assets/img/hero-image.png" alt="Main hero phone image">
+      </div>
+      <div class="col" id="right">
+        <p>Chat with your AI-powered religion<br>guide to discover even the deepest<br>spiritual secrets.</p>
+        <img id="top-download-button" src="assets/img/download-app-store-2x.webp" alt="Download on the app store button" width="384px" height="128px" (click)="goToAppStore('home-top-cta')">
       </div>
     </div>
-    <!-- <div class="right">
-      
-    </div> -->
+  </div>
+
+  <div class="bottom">
+
   </div>
 </div>
 
-<div class="content-section">
-  <div class="container">
-    <!-- <article>
-      <h2 class="article-header">Instant answers to your Bible questions</h2>
-      <img src="assets/img/article1.png" alt="" class="article-image">
-      
-      <p><i>With BibleStudy's AI-powered technology, you can get accurate and insightful answers to your Bible questions in seconds, without having to search through multiple sources.</i></p>
-    </article>
+<div class="main-section">
+  <div class="top">
+    <div class="heading">
+      <h1><span>Bible</span>Chat</h1>
+      <h2>Achieve More for Your Faith Than You Ever Imagined</h2>
+      <p>Harness the power of AI to better understand the Bible, ask questions about religion or anything else in your life that troubles you, and find<br>yourself immersed in a truly biblical learning experience.</p>
+    </div>
 
-    <article>
-      <h2 class="article-header">Personalized Bible experience</h2>
-      <img src="assets/img/article2.png" alt="" class="article-image">
-      
-      <p><i>BibleStudy offers personalized recommendations, devotionals, and playlists based on your preferences and interests, so you can create a Bible experience that's unique to you.</i></p>
-    </article>
-    
-    <article>
-      <h2 class="article-header">Join a community of Bible enthusiasts</h2>
-      <img src="assets/img/article3.png" alt="" class="article-image">
-      
-      <p><i>With BibleStudy, you can connect with other Bible enthusiasts, ask questions, and share your insights and experiences. Join a welcoming community of people who love the Bible as much as you do.</i></p>
-    </article> -->
+    <div class="benefits desktop">
+      <div class="dark benefit first">
+        <div class="left"><p>Get Answers to Any of Your Deepest Questions</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
+        <div class="center"><img src="assets/img/main-benefits-full.png" alt="Main benefits image"></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Access to Your Preferred Bible Version</p></div>
+      </div>
+      <div class="white benefit">
+        <div class="left"><p>Learn More About Religion and Your Faith</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
+        <div class="center"></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Suitable for Everyone</p></div>
+      </div>
+      <div class="dark benefit">
+        <div class="left"><p>Get Truly Inspiring Guidance</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
+        <div class="center"></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Remember Your Thoughts, Questions, and Prayers</p></div>
+      </div>
+    </div>
 
-    <article *ngFor="let article of mainContent">
-      <div class="article-top">
-        <h1>{{ article.title }}</h1>
-        <p>{{ article.content }}</p>
+    <div class="benefits mobile">
+
+      <div class="dark benefit first">
+        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Any of Your Deepest Questions</p></div>
       </div>
-      <div class="article-content">
-        <div class="article-col">
-          <div class="subarticle" *ngFor="let subarticle of article.subarticlesLeft">
-            <h2>{{ subarticle.title }}</h2>
-            <p>{{ subarticle.content }}</p>
-          </div>
-        </div>
-        <div class="article-col">
-          <div class="article-images">
-            <img [src]="article.image" [alt]="article.imageAlt" class="article-img">
-            <a href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666"><img src="assets/img/download-app-store-2x.webp" alt="Download on the app store" class="article-download"></a>
-          </div>
-        </div>
-        <div class="article-col">
-          <div class="subarticle" *ngFor="let subarticle of article.subarticlesRight">
-            <h2>{{ subarticle.title }}</h2>
-            <p>{{ subarticle.content }}</p>
-          </div>
-        </div>
+      <div class="white benefit">
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Access to Your Preferred Bible Version</p></div>
       </div>
-    </article>
+      <div class="dark benefit">
+        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Learn More About Religion and Your Faith</p></div>
+      </div>
+      
+      <div class="white benefit">
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Suitable for Everyone</p></div>
+      </div>
+      <img src="assets/img/main-benefits-full.png" alt="Main benefits image" id="main-benefits-mobile">
+      <div class="dark benefit">
+        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Truly Inspiring Guidance</p></div>
+      </div>
+      <div class="white benefit">
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Remember Your Thoughts, Questions, and Prayers</p></div>
+      </div>
+      <div class="dark benefit">
+        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Learn More About Religion and Your Faith</p></div>
+      </div>
+      <div class="white benefit">
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Suitable for Everyone</p></div>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="testimonials-section">
-  <figure class="snip1533">
-    <figcaption>
-      <blockquote>
-        <p>BibleChat has been a game-changer for me. As someone who's always been intimidated by the Bible, the app has made it easy for me to explore the Scriptures and ask questions. I love the personalized recommendations and the community of fellow learners.</p>
-      </blockquote>
-      <h3>Sarah Johnson</h3>
-      <h4>App Store</h4>
-    </figcaption>
-  </figure>
-  <figure class="snip1533">
-    <figcaption>
-      <blockquote>
-        <p>I've been using BibleStudy for a few months now, and I'm blown away by the technology. The AI-powered Bible is incredibly accurate and responsive, and I've learned so much from the daily devotionals and Bible verses. Highly recommended!</p>
-      </blockquote>
-      <h3>David Lee</h3>
-      <h4>App Store</h4>
-    </figcaption>
-  </figure>
-  <figure class="snip1533">
-    <figcaption>
-      <blockquote>
-        <p>As a pastor, I'm always looking for new ways to engage my congregation with the Bible. BibleStudy has been an invaluable tool for our church, allowing us to create customized reading plans and encourage discussion and reflection. </p>
-      </blockquote>
-      <h3>Pastor John Smith</h3>
-      <h4>Play Store</h4>
-    </figcaption>
-  </figure>
+  <div class="middle">
+    <div class="overlay">
+      <div class="benefits">
+        <div class="benefit">
+          <div class="left"><p>The Scripture No Longer Has Any Secrets</p></div>
+          <div class="center"></div>
+          <div class="right"><p>The Ultimate Religious Guidance</p></div>
+        </div>
+        <div class="benefit">
+          <div class="left"><p>Strengthen Your Faith</p></div>
+          <div class="center"></div>
+          <div class="right"><p>Create Personalized Prayer</p></div>
+        </div>
+        <div class="benefit">
+          <div class="left"><p>Feed Your Soul</p></div>
+          <div class="center"></div>
+          <div class="right"><p>Say No to Sin</p></div>
+        </div>
+      </div>
+
+      <div class="blog-highlights">
+        <div class="blog-post">
+          <div class="header">
+            <p class="title">Blog title goes here</p>
+            <a class="redirect">Read more</a>
+          </div>
+          <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed ipsum eget velit lobortis mollis eget vel tortor. Praesent a tortor in neque ultrices imperdiet et id sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean consequat pellentesque aliquet.</p>
+        </div>
+        <div class="blog-post">
+          <div class="header">
+            <p class="title">Blog title goes here</p>
+            <a class="redirect">Read more</a>
+          </div>
+          <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed ipsum eget velit lobortis mollis eget vel tortor. Praesent a tortor in neque ultrices imperdiet et id sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean consequat pellentesque aliquet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <h2>Explore your topics and interests <span class="white">through <span class="red">the eyes</span> of the bible</span></h2>
+    <div class="screen-nav">
+      <a *ngFor="let navLink of screenNavLinks; let i = index" [ngClass]="{'selected': navLink.selected === true}" (click)="onSelect(i)">{{ navLink.name }}</a>
+    </div>
+
+    <div class="phone">
+      <img src="assets/img/{{currentScreen}}.png" alt="Phone picture interest" id="picture" width="496px" height="496px">
+      <img src="assets/img/half-phone-frame.png" alt="Interest phone frame" id="frame" width="512px" height="512px">
+    </div>
+  </div>
 </div>
 
 <div class="bottom-section">
-  <!-- <h1>Start Your Journey Trough Faith and Spirituality Now</h1>
-  <p>Discover how AI can guide you and boost your faith</p>
+
+  <div class="overlay">
+    <div class="top">
+      <h2>Don’t limit your knowledge to the above topics.<br>Get <strong>BibleChat</strong> on your phone and enjoy all its perks.</h2>
+      <img src="assets/img/download-app-store-2x.webp" alt="Bottom app store download button" id="bottom-cta" (click)="goToAppStore('home-bottom-cta')">
+      <p>With the Bible Chat app, a whole world of guided spirituality becomes available at your fingertips.</p>
+    </div>
+  </div>
   
-  <div class="download-section">
-    <a href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666"><img src="assets/img/download-app-store-2x.webp" alt="Download on the app store" id="first-download"></a>
-  </div> -->
+  <div class="bottom">
+    <a (click)="redirectToSocial('facebook')"><img src="assets/img/facebook-big-icon-white.png" alt="Facebook redirect button image" height="64px" width="64px"></a>
+    <a (click)="redirectToSocial('instagram')"><img src="assets/img/instagram-big-icon-white.png" alt="Instagram redirect button image" height="64px" width="64px"></a>
+    <!-- <a (click)="redirectToSocial('twitter')"><img src="assets/img/twitter-big-icon-white.png" alt="Twitter redirect button image" height="64px" width="64px"></a> -->
+    <a (click)="redirectToSocial('tiktok')"><img src="assets/img/twitter-big-icon-white.png" alt="TikTok redirect button image" height="64px" width="64px"></a>
+  </div>
 </div>
