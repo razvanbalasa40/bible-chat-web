@@ -3,18 +3,26 @@
 
   <div class="top">
     <div class="header">
-      <img src="assets/img/bible-study-icon.png" alt="Bible chat icon" width="128px" height="128px">
+      <div class="left"></div>
+      <div class="center"><img src="assets/img/bible-study-icon.png" alt="Bible chat icon" width="128px" height="128px"></div>
+      <div class="right">
+        <button id="contact-button" class="desktop">Get in touch</button>
+      </div>
     </div>
     <div class="content">
       <div class="col" id="left">
-        <h2>Go beyond the conventional<br>understanding of religion<br>and faith</h2>
+        <!-- <h2 class="desktop">Go beyond the conventional<br> understanding of religion<br> and faith</h2> -->
+        <h2 class="desktop">Interactive Bible Learning.<br> Powered by the<br> Most Advanced AI.</h2>
+
+        <h2 class="mobile">The Scripture Illuminated by AI.</h2>
       </div>
       <div class="col" id="middle">
-        <img src="assets/img/hero-image.png" alt="Main hero phone image">
+        <img src="assets/img/bible-chat-app.png" alt="The Bible Chat app" width="416px" height="744px">
       </div>
       <div class="col" id="right">
-        <p>Chat with your AI-powered religion<br>guide to discover even the deepest<br>spiritual secrets.</p>
-        <img id="top-download-button" src="assets/img/download-app-store-2x.webp" alt="Download on the app store button" width="384px" height="128px" (click)="goToAppStore('home-top-cta')">
+        <!-- <p>Chat with your AI-powered religion<br> guide to discover even the deepest<br> spiritual secrets.</p> -->
+        <p>Chat with Your Personal<br> AI-Powered Guide to Uncover the<br> Depths of the Bible.</p>
+        <a href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666" (click)="goToAppStore('home-top-cta')"><img id="top-download-button" src="assets/img/download-app-store-2x.webp" alt="Download the iOS Bible Chat app" width="384px" height="128px"></a>
       </div>
     </div>
   </div>
@@ -29,19 +37,19 @@
     <div class="heading">
       <h1><span>Bible</span>Chat</h1>
       <h2>Achieve More for Your Faith Than You Ever Imagined</h2>
-      <p>Harness the power of AI to better understand the Bible, ask questions about religion or anything else in your life that troubles you, and find<br>yourself immersed in a truly biblical learning experience.</p>
+      <p>Harness the power of AI to better understand the Bible, ask questions about religion or anything else in your life that troubles you, and find<br> yourself immersed in a truly biblical learning experience.</p>
     </div>
 
     <div class="benefits desktop">
       <div class="dark benefit first">
-        <div class="left"><p>Get Answers to Any of Your Deepest Questions</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
-        <div class="center"><img src="assets/img/main-benefits-full.png" alt="Main benefits image"></div>
+        <div class="left"><p>Suitable for Everyone</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
+        <div class="center"><img src="assets/img/main-benefits-full.png" alt="Bible Chat app - questions"></div>
         <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Access to Your Preferred Bible Version</p></div>
       </div>
       <div class="white benefit">
         <div class="left"><p>Learn More About Religion and Your Faith</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
         <div class="center"></div>
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Suitable for Everyone</p></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Any of Your Deepest Questions</p></div>
       </div>
       <div class="dark benefit">
         <div class="left"><p>Get Truly Inspiring Guidance</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
@@ -51,32 +59,24 @@
     </div>
 
     <div class="benefits mobile">
-
       <div class="dark benefit first">
-        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Any of Your Deepest Questions</p></div>
+        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Suitable for Everyone</p></div>
       </div>
       <div class="white benefit">
         <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Access to Your Preferred Bible Version</p></div>
-      </div>
+      </div>      
       <div class="dark benefit">
-        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Learn More About Religion and Your Faith</p></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Any of Your Deepest Questions</p></div>
       </div>
-      
+      <img src="assets/img/main-benefits-full.png" alt="Bible Chat app - questions" id="main-benefits-mobile">
       <div class="white benefit">
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Suitable for Everyone</p></div>
-      </div>
-      <img src="assets/img/main-benefits-full.png" alt="Main benefits image" id="main-benefits-mobile">
-      <div class="dark benefit">
         <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Truly Inspiring Guidance</p></div>
       </div>
-      <div class="white benefit">
+      <div class="dark benefit">
         <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Remember Your Thoughts, Questions, and Prayers</p></div>
       </div>
-      <div class="dark benefit">
-        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Learn More About Religion and Your Faith</p></div>
-      </div>
       <div class="white benefit">
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Suitable for Everyone</p></div>
+        <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Learn More About Religion and Your Faith</p></div>
       </div>
     </div>
   </div>
@@ -127,7 +127,7 @@
     </div>
 
     <div class="phone">
-      <img src="assets/img/{{currentScreen}}.png" alt="Phone picture interest" id="picture" width="496px" height="496px">
+      <img src="assets/img/{{currentScreen.imageUrl}}.png" [alt]="currentScreen.name" id="picture" width="496px" height="496px">
       <img src="assets/img/half-phone-frame.png" alt="Interest phone frame" id="frame" width="512px" height="512px">
     </div>
   </div>
@@ -137,16 +137,16 @@
 
   <div class="overlay">
     <div class="top">
-      <h2>Don’t limit your knowledge to the above topics.<br>Get <strong>BibleChat</strong> on your phone and enjoy all its perks.</h2>
-      <img src="assets/img/download-app-store-2x.webp" alt="Bottom app store download button" id="bottom-cta" (click)="goToAppStore('home-bottom-cta')">
+      <h2>Don't confine your exploration to these subjects.<br> Experience the full potential of <strong>Bible Chat</strong> on your phone.</h2>
+      <a (click)="goToAppStore('home-bottom-cta')" href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666"><img src="assets/img/download-app-store-2x.webp" alt="Download the iOS Bible Chat app" id="bottom-cta" ></a>
       <p>With the Bible Chat app, a whole world of guided spirituality becomes available at your fingertips.</p>
     </div>
   </div>
   
   <div class="bottom">
     <!-- <a (click)="redirectToSocial('facebook')"><img src="assets/img/facebook-big-icon-white.png" alt="Facebook redirect button image" height="64px" width="64px"></a> -->
-    <a (click)="redirectToSocial('instagram')"><img src="assets/img/instagram-big-icon-white.png" alt="Instagram redirect button image" height="64px" width="64px"></a>
-    <a (click)="redirectToSocial('youtube')"><img src="assets/img/youtube-big-icon-white.png" alt="Youtube redirect button image" height="64px" width="64px"></a>
-    <a (click)="redirectToSocial('tiktok')"><img src="assets/img/tiktok-big-icon-white.png" alt="TikTok redirect button image" height="64px" width="64px"></a>
+    <a href="https://instagram.com/the.biblechat?igshid=MzRlODBiNWFlZA==" (click)="redirectToSocial('instagram')"><img src="assets/img/instagram-big-icon-white.png" alt="Bible Chat on Instagram" height="64px" width="64px"></a>
+    <a href="https://www.youtube.com/channel/UCq-zYscdvJu3Xn16NSegr7Q" (click)="redirectToSocial('youtube')"><img src="assets/img/youtube-big-icon-white.png" alt="Bible Chat on Youtube" height="64px" width="64px"></a>
+    <a href="https://www.tiktok.com/@biblechat.app?_t=8cYwXswcIix&_r=1" (click)="redirectToSocial('tiktok')"><img src="assets/img/tiktok-big-icon-white.png" alt="Bible Chat on TikTok" height="64px" width="64px"></a>
   </div>
 </div>

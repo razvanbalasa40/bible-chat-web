@@ -7,31 +7,81 @@ import { existsSync } from 'fs';
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
+import { SitemapStream } from 'sitemap';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/bible-chat-web/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const indexHtml = existsSync(join(distFolder, 'index.original.html'))
+    ? 'index.original.html'
+    : 'index';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
-  server.engine('html', ngExpressEngine({
-    bootstrap: AppServerModule,
-  }));
+  server.engine(
+    'html',
+    ngExpressEngine({
+      bootstrap: AppServerModule,
+    })
+  );
 
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
+
   // Serve static files from /browser
-  server.get('*.*', express.static(distFolder, {
-    maxAge: '1y'
-  }));
+  const nonIndexableRobotsContent = 'User-agent: *\nDisallow: /';
+  const indexableRobotsContent = 'User-agent: *\nDisallow:';
+  const isProduction = true;
+
+  server.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.send(isProduction ? indexableRobotsContent : nonIndexableRobotsContent);
+  });
+
+  const apicache = require('apicache');
+  let cache = apicache.middleware;
+
+  server.get('/sitemap.xml', cache('1 hour'), (req, res) => {
+    res.header('Content-Type', 'application/xml');
+
+    try {
+      const smStream = new SitemapStream({ hostname: 'thebiblechat.app' });
+
+      (async () => {
+        const routes = ['route1', 'route2'];
+
+        for (const route of routes) {
+          smStream.write(route);
+        }
+
+        smStream.end();
+
+        smStream.pipe(res).on('error', (e) => {
+          throw e;
+        });
+      })();
+    } catch (e) {
+      console.error(e);
+      res.status(500).end();
+    }
+  });
+
+  server.get(
+    '*.*',
+    express.static(distFolder, {
+      maxAge: '1y',
+    })
+  );
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    res.render(indexHtml, {
+      req,
+      providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }],
+    });
   });
 
   return server;
