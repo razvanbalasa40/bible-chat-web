@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
       selected: true,
     },
     {
-      name: 'End',
+      name: 'End Times',
       imageUrl: 'half-screen-end',
     },
     {
@@ -84,6 +84,10 @@ export class HomeComponent implements OnInit {
         window.location.href =
           'https://www.tiktok.com/@biblechat.app?_t=8cYwXswcIix&_r=1';
         break;
+      case 'youtube':
+        window.location.href =
+          'https://www.youtube.com/channel/UCq-zYscdvJu3Xn16NSegr7Q';
+        break;
     }
   }
 
@@ -93,6 +97,6 @@ export class HomeComponent implements OnInit {
     });
 
     window.location.href =
-      'https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666"';
+      'https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666';
   }
 }
