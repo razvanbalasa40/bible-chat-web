@@ -15,18 +15,31 @@ import {
   UserTrackingService,
 } from '@angular/fire/analytics';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { Auth, provideAuth, getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { HttpClientModule } from '@angular/common/http';
+import { BlogComponent } from './blog/blog.component';
+import { CommonModule } from '@angular/common';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { GtagModule } from 'angular-gtag';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    FooterComponent,
+    BlogComponent,
+    BlogPostComponent,
+  ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
+    HttpClientModule,
+    CommonModule,
     GtagModule.forRoot({ trackingId: 'G-JW3BEGLW0Y', trackPageviews: true }),
   ],
   providers: [ScreenTrackingService, UserTrackingService],

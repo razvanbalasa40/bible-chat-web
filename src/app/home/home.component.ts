@@ -72,8 +72,8 @@ export class HomeComponent implements OnInit {
       screen.selected = false;
     }
 
-    this.screenNavLinks[index].selected = true;
     this.currentScreen = this.screenNavLinks[index];
+    this.screenNavLinks[index].selected = true;
 
     this.gtag.event('view-phone-screen', {
       screen: this.screenNavLinks[index].name,
@@ -84,33 +84,11 @@ export class HomeComponent implements OnInit {
     this.gtag.event('footer_redirect_to_social', {
       platform: socialPlatform,
     });
-
-    // switch (socialPlatform) {
-    //   case 'facebook':
-    //     window.location.href =
-    //       'https://instagram.com/the.biblechat?igshid=MzRlODBiNWFlZA==';
-    //     break;
-    //   case 'instagram':
-    //     window.location.href =
-    //       'https://instagram.com/the.biblechat?igshid=MzRlODBiNWFlZA==';
-    //     break;
-    //   case 'tiktok':
-    //     window.location.href =
-    //       'https://www.tiktok.com/@biblechat.app?_t=8cYwXswcIix&_r=1';
-    //     break;
-    //   case 'youtube':
-    //     window.location.href =
-    //       'https://www.youtube.com/channel/UCq-zYscdvJu3Xn16NSegr7Q';
-    //     break;
-    // }
   }
 
   goToAppStore(ctaElement: string) {
-    this.gtag.event('go_to_app_store_2', {
+    this.gtag.event('go_to_app_store', {
       cta: ctaElement,
     });
-
-    // window.location.href =
-    //   'https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666';
   }
 }

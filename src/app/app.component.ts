@@ -7,7 +7,5 @@ import { Gtag } from 'angular-gtag';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'bible-chat-web';
-
   constructor(gtag: Gtag) {}
 }

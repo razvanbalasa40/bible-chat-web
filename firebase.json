@@ -1,18 +1,8 @@
 {
   "hosting": [
     {
-      "public": "dist/bible-chat-web/",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
       "target": "bible-chat-web",
-      "public": "dist/bible-chat-web/browser",
+      "public": "dist/bible-chat-web",
       "ignore": ["**/.*"],
       "headers": [
         {
@@ -37,12 +27,9 @@
       "rewrites": [
         {
           "source": "**",
-          "function": "ssr_ssr_bible_chat_web"
+          "destination": "/index.html"
         }
       ]
     }
-  ],
-  "functions": {
-    "source": "dist/bible-chat-web/functions"
-  }
+  ]
 }
