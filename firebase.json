@@ -3,7 +3,9 @@
     {
       "target": "bible-chat-web",
       "public": "dist/bible-chat-web",
-      "ignore": ["**/.*"],
+      "ignore": [
+        "**/.*"
+      ],
       "headers": [
         {
           "source": "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)",

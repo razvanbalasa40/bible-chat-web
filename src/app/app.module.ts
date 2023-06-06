@@ -21,6 +21,13 @@ import { BlogComponent } from './blog/blog.component';
 import { CommonModule } from '@angular/common';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { GtagModule } from 'angular-gtag';
+import { BlogListComponent } from './blog/blog-list/blog-list.component';
+import { BlogPostCardComponent } from './blog/blog-list/blog-post-card/blog-post-card.component';
+import { SlugifyPipe } from './shared/pipes/slugify.pipe';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { PrivacyComponent } from './static/privacy/privacy.component';
+import { EulaComponent } from './static/eula/eula.component';
+import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +37,10 @@ import { GtagModule } from 'angular-gtag';
     FooterComponent,
     BlogComponent,
     BlogPostComponent,
+    SlugifyPipe,
+    PrivacyComponent,
+    EulaComponent,
+    TermsAndConditionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +48,7 @@ import { GtagModule } from 'angular-gtag';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
     provideAuth(() => getAuth()),
     HttpClientModule,
     CommonModule,

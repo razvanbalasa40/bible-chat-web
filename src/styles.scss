@@ -6,7 +6,7 @@
 @use "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 html, body {
-  background-color: colors.$primary-color;
+  background-color: #F8F6F3;
   color: colors.$primary-text-color;
 
   font-size: typings.$default-body-font-size;
@@ -48,4 +48,8 @@ a {
   p {
     font-size: 16px;
   }
+}
+
+.main-content-container {
+  margin-top: 128px;
 }
