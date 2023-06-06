@@ -7,9 +7,9 @@
             <li><h1 id="logo-text" [routerLink]="['/']"><span class="white-highlight">Bible</span> Chat</h1></li>
           </ul>
           <ul class="nav-right full" [ngClass]="{'activated': menuToggled === true}">
-            <li><a [routerLink]="['/']">Home</a></li>
+            <li><a [routerLink]="['/']" (click)="toggleMenu()">Home</a></li>
             <li><a href="https://blog.thebiblechat.app">Blog</a></li>
-            <li><a [routerLink]="['/contact']" id="contact-button">Get in touch</a></li>
+            <li><a href="mailto:hello@thebiblechat.app" id="contact-button" (click)="toggleMenu()">Get in touch</a></li>
           </ul>
           <ul class="nav-right burger" (click)="toggleMenu()">
             <li><img [src]="burgerSrc" alt="Burger menu icon" width="60px" height="60px"></li>

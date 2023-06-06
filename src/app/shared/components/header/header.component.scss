@@ -4,6 +4,7 @@
   background-image: url("../../../../assets/img/ripped-brown-top.png");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: 100% 64px;
 
   &.not-on-homepage {
     padding-bottom: 60px;
@@ -152,5 +153,9 @@
         }
       }
     }
+  }
+
+  .background-container {
+    background-size: auto 64px;
   }
 }
