@@ -10,6 +10,7 @@ import { HomeResolver } from './home.resolver';
 import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyComponent } from './static/privacy/privacy.component';
 import { EulaComponent } from './static/eula/eula.component';
+import { ContactComponent } from './static/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
       //     },
       //   ],
       // },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
       {
         path: 'terms-and-conditions',
         component: TermsAndConditionsComponent,

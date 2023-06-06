@@ -28,6 +28,8 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 import { PrivacyComponent } from './static/privacy/privacy.component';
 import { EulaComponent } from './static/eula/eula.component';
 import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms-and-conditions.component';
+import { ContactComponent } from './static/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms
     PrivacyComponent,
     EulaComponent,
     TermsAndConditionsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +58,7 @@ import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms
     HttpClientModule,
     CommonModule,
     GtagModule.forRoot({ trackingId: 'G-JW3BEGLW0Y', trackPageviews: true }),
+    ReactiveFormsModule,
   ],
   providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
