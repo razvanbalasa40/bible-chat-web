@@ -37,6 +37,8 @@ import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms
     FooterComponent,
     BlogComponent,
     BlogPostComponent,
+    BlogListComponent,
+    BlogPostCardComponent,
     SlugifyPipe,
     PrivacyComponent,
     EulaComponent,

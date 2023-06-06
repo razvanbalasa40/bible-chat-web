@@ -1,0 +1,28 @@
+<div class="blog-post">
+  <h1>{{ blogPost?.title }}</h1>
+  <div class="tags">
+    <a [href]="tag | slugify" *ngFor="let tag of blogPost?.tags">{{ tag }}</a><p>&nbsp;/ By&nbsp;</p> <a [href]="blogPost?.author?.url">{{blogPost?.author?.name}}</a>
+  </div>
+  <img *ngIf="topImage" [src]="topImage" alt="Blog Post Image" id="top-image">
+  <p>{{ blogPost?.content }}</p>
+  
+  <div class="table-of-contents" *ngIf="blogPost?.paragraphs">
+    <p>Table Of Contents</p>
+    <div *ngFor="let paragraph of blogPost?.paragraphs; let i = index;">
+      <button (click)="scroll(i)">{{ i + 1 }}.{{ paragraph.title }}</button>
+    </div>
+  </div>
+
+  <div class="paragraphs" #paragraphs>
+    <div *ngFor="let paragraph of blogPost?.paragraphs" >
+      <h2>{{ paragraph.title }}</h2>
+      <p>{{ paragraph.content }}</p>
+  
+      <div *ngFor="let subparagraph of paragraph.subparagraphs">
+        <h3>{{ subparagraph.title }}</h3>
+        <p>{{ subparagraph.content }}</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
