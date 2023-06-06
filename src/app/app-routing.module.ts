@@ -22,26 +22,26 @@ const routes: Routes = [
           posts: HomeResolver,
         },
       },
-      {
-        path: 'blog',
-        component: BlogComponent,
-        children: [
-          {
-            path: '',
-            component: BlogListComponent,
-            resolve: {
-              posts: BlogPostsResolver,
-            },
-          },
-          {
-            path: ':blogPostSlug',
-            component: BlogPostComponent,
-            resolve: {
-              post: BlogPostResolver,
-            },
-          },
-        ],
-      },
+      // {
+      //   path: 'blog',
+      //   component: BlogComponent,
+      //   children: [
+      //     {
+      //       path: '',
+      //       component: BlogListComponent,
+      //       resolve: {
+      //         posts: BlogPostsResolver,
+      //       },
+      //     },
+      //     {
+      //       path: ':blogPostSlug',
+      //       component: BlogPostComponent,
+      //       resolve: {
+      //         post: BlogPostResolver,
+      //       },
+      //     },
+      //   ],
+      // },
       {
         path: 'terms-and-conditions',
         component: TermsAndConditionsComponent,

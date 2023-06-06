@@ -1,55 +1,154 @@
 @use "../../../styles/spacing";
 
-header {
-  width: 100%;
-  background: url("../../../../assets/img/rip.svg") bottom;
-  background-size: 100%;
-  margin-bottom: spacing.$default-base-spacing * 4;
-  padding-bottom: spacing.$default-base-spacing * 4;
-  padding-top: spacing.$default-base-spacing;
+.background-container {
+  background-image: url("../../../../assets/img/ripped-brown-top.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
 
-  nav {
-    display: flex;
-    flex-direction: row;
+  &.not-on-homepage {
+    padding-bottom: 60px;
+  }
+}
+
+.header-container {
+  background-color: #BAAB8A;
+  padding: 16px 0px;
+
+  .header {
     width: 100%;
+    background-size: 100%;
     
-    ul {
-      display: flex!important;
-      justify-content: center;
-      align-items: center;
-
-      li {
-        padding: spacing.$default-base-spacing;
-      }
-    }
-
-    .nav-left {
-      display: block;
-      justify-self: start;
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: inline-block;
-
-        #logo {
-          width:60px;
-          height: auto;
+    padding: spacing.$default-base-spacing, spacing.$default-base-spacing * 2;
+    width: 100%;
+  
+    max-width: 1342px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    nav {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      
+      ul {
+        display: flex!important;
+        justify-content: center;
+        align-items: center;
+        
+        li {
+          padding: spacing.$default-base-spacing;
         }
       }
+
+      .nav-left {
+        display: block;
+        justify-self: start;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+
+          #logo {
+            width: 68px;
+            height: auto;
+            margin-top: -23px;
+            margin-right: -32px;
+          }
+
+          #logo-text {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 32px;
+
+            .white-highlight {
+              color: #FFFFFF;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .nav-right {
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+        gap: 48px;
+
+        li {
+          display: inline-block;
+
+          a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            color: #FFFFFF;
+          }
+
+          a#contact-button {
+            // margin-left: 430px;
+            width: 173px;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            border: none;
+            align-self: center;
+            margin-top: 46px;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            padding: 16px 32px;
+            color: #25221C;
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.7);
+            }
+          }
+        }
+      }
+
+      .nav-right.burger {
+        display: none!important;
+      }
     }
+  }
+}
 
-    .nav-right {
-      display: block;
-      margin: 0;
-      padding: 0;
-      margin-left: auto;
+@media (max-width: 768px) {
+  .header-container {
+    .header {
+      nav {
+        .nav-right.full {
+          position: absolute;
+          flex-direction: column;
+          width: 100vw;
+          height: 100vh;
+          background: #BAAB8A;
+          z-index: 20;
+          display: none!important;
+          padding-bottom: 150px;
 
-      li {
-        display: inline-block;
-        text-decoration: underline;
-        a {
-          font-size: 32px;
+          &.activated {
+            display: flex!important;
+            
+          }
+        }
+
+        .nav-right.burger {
+          display: block!important;
+          z-index: 21;
+          
+          li {
+            padding-top: 0;
+          }
         }
       }
     }

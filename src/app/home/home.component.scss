@@ -1,12 +1,16 @@
 @use "../styles/spacing";
 @use "../../app/styles/colors";
 
+.background-container {
+  display: none!important;
+}
+
 .hero-section {
   background-color: #BAAB8A;
   width: 100%;
   
   .top {
-    height: 600px;
+    height: 474px;
     background-image: url("../../assets/img/ripped-gray-bottom.png");
     background-position: bottom;
     background-repeat: no-repeat;
@@ -32,21 +36,7 @@
         width: 173px;
         height: 64px;
 
-        #contact-button {
-          // margin-left: 430px;
-          width: 173px;
-          height: 64px;
-          background: rgba(255, 255, 255, 0.5);
-          border-radius: 16px;
-          border: none;
-          align-self: center;
-          margin-top: 46px;
-          transition: all 0.2s ease-in-out;
-
-          &:hover {
-            background: rgba(255, 255, 255, 0.7);
-          }
-        }
+        
       }
 
       .center {
@@ -616,7 +606,7 @@
   
   .hero-section {
     .top {
-      height: 600px;
+      height: 480px;
 
       .content {
         display: flex;

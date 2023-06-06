@@ -1,13 +1,20 @@
-<header>
-  <nav class="container">
-    <ul class="nav-left">
-      <li><img src="assets/img/Bible.png" alt="Bible Chat Logo" id="logo"></li>
-      <li><h1>Bible Chat</h1></li>
-      <li><a>Home</a></li>
-    </ul>
-    <ul class="nav-right">
-      <li><a [routerLink]="['/']">Home</a></li>
-      <li><a [routerLink]="['/blog']">Blog</a></li>
-    </ul>
-  </nav>
-</header>
+<div class="background-container" [ngClass]="{'not-on-homepage': router.url !== '' && router.url !== '/'}">
+  <div class="header-container">
+    <header class="header">
+        <nav>
+          <ul class="nav-left">
+            <li><img src="assets/img/bible-study-icon.png" alt="Bible chat icon" id="logo" [routerLink]="['/']"></li>
+            <li><h1 id="logo-text" [routerLink]="['/']"><span class="white-highlight">Bible</span> Chat</h1></li>
+          </ul>
+          <ul class="nav-right full" [ngClass]="{'activated': menuToggled === true}">
+            <li><a [routerLink]="['/']">Home</a></li>
+            <li><a href="https://blog.thebiblechat.app">Blog</a></li>
+            <li><a [routerLink]="['/contact']" id="contact-button">Get in touch</a></li>
+          </ul>
+          <ul class="nav-right burger" (click)="toggleMenu()">
+            <li><img [src]="burgerSrc" alt="Burger menu icon" width="60px" height="60px"></li>
+          </ul>
+        </nav>
+    </header>
+  </div>
+</div>
