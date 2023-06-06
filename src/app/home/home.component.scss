@@ -322,36 +322,39 @@
         gap: 64px;
         padding: 0 32px;
         
-        .blog-post {
-          width: 608px;
-          min-height: 256px;
-          background: #FFFFFF;
-          box-shadow: 0px 16px 32px rgba(186, 171, 138, 0.16);
-          border-radius: 16px;
-          padding: 32px;
-          
-          .header {
-            display: flex;
+        .top-blog-post {
+          .blog-post {
+            width: 608px;
+            min-height: 256px!important;
+            max-width: 608px!important;
+            // background: #FFFFFF;
+            box-shadow: 0px 16px 32px rgba(186, 171, 138, 0.16);
+            border-radius: 16px;
+            padding: 32px;
+            
+            .header {
+              display: flex;
 
-            .title {
-              font-style: normal;
-              font-weight: 700;
-              font-size: 20px;
-              line-height: 32px;
-            }
+              .title {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 32px;
+              }
 
-            .redirect {
-              margin-left: auto;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 16px;
-              line-height: 32px;
-              text-align: right;
-              color: #C84E34;
+              .redirect {
+                margin-left: auto;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 32px;
+                text-align: right;
+                color: #C84E34;
 
-              &:hover {
-                cursor: pointer;
-                text-decoration: underline;
+                &:hover {
+                  cursor: pointer;
+                  text-decoration: underline;
+                }
               }
             }
           }
@@ -626,6 +629,7 @@
           h2 {
             margin-top: 0;
             font-size: 24px;
+            line-height: 32px;
           }
         }
 
@@ -643,7 +647,7 @@
           }
 
           #top-download-button {
-            margin-top: 48px;
+            margin-top: 32px;
             width: 220px;
           }
         }
@@ -744,18 +748,21 @@
 
         .blog-highlights {
           flex-wrap: wrap;
+            .top-blog-post {
+              
+              .blog-post {
+                width: 300px;
+                .header {
+                  .title, .redirect {
+                    font-size: 16px!important;
+                  }
+                }
 
-          .blog-post {
-            .header {
-              .title, .redirect {
-                font-size: 16px;
+                .content {
+                  font-size: 14px!important;
+                }
               }
             }
-
-            .content {
-              font-size: 14px;
-            }
-          }
         }
       }
     } 

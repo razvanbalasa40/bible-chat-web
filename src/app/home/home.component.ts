@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Gtag } from 'angular-gtag';
+import { BlogPost } from '../blog/blog.models';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,9 @@ import { Gtag } from 'angular-gtag';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  private activatedRoute: ActivatedRoute = inject(ActivatedRoute);
+  public blogPosts: BlogPost[] = [];
+
   public screenNavLinks: {
     name: string;
     imageUrl: string;
@@ -45,7 +50,7 @@ export class HomeComponent implements OnInit {
       screenAlt: 'Bible Chat app - questions about prayer',
     },
     {
-      name: 'Relationship',
+      name: 'Relationships',
       imageUrl: 'half-screen-relationship',
       screenAlt: 'Bible Chat app - questions about relationships',
     },
@@ -65,7 +70,11 @@ export class HomeComponent implements OnInit {
 
   constructor(private gtag: Gtag) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.activatedRoute.data.subscribe(({ posts }) => {
+      this.blogPosts = posts;
+    });
+  }
 
   onSelect(index: number) {
     for (let screen of this.screenNavLinks.filter((s) => s.selected)) {

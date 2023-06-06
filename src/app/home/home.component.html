@@ -14,14 +14,14 @@
         <!-- <h2 class="desktop">Go beyond the conventional<br> understanding of religion<br> and faith</h2> -->
         <h2 class="desktop">Interactive Bible Learning.<br> Powered by the<br> Most Advanced AI.</h2>
 
-        <h2 class="mobile">The Scripture Illuminated by AI.</h2>
+        <h2 class="mobile">Interactive Bible Learning <br> Powered by AI.</h2>
       </div>
       <div class="col" id="middle">
         <img src="assets/img/bible-chat-app.png" alt="The Bible Chat app" width="416px" height="744px">
       </div>
       <div class="col" id="right">
         <!-- <p>Chat with your AI-powered religion<br> guide to discover even the deepest<br> spiritual secrets.</p> -->
-        <p>Chat with Your Personal<br> AI-Powered Guide to Uncover the<br> Depths of the Bible.</p>
+        <p>Chat with Your Personal<br> AI-Powered Guide to<br> Explore the Word of God.</p>
         <a href="https://apps.apple.com/ro/app/bible-study-ai-chatbot-memory/id6448849666" (click)="goToAppStore('home-top-cta')"><img id="top-download-button" src="assets/img/download-app-store-2x.webp" alt="Download the iOS Bible Chat app" width="384px" height="128px"></a>
       </div>
     </div>
@@ -36,7 +36,7 @@
   <div class="top">
     <div class="heading">
       <h1><span>Bible</span>Chat</h1>
-      <h2>Achieve More for Your Faith Than You Ever Imagined</h2>
+      <h2>Grow More In Your Faith Than You Ever Imagined</h2>
       <p>Harness the power of AI to better understand the Bible, ask questions about religion or anything else in your life that troubles you, and find<br> yourself immersed in a truly biblical learning experience.</p>
     </div>
 
@@ -44,17 +44,18 @@
       <div class="dark benefit first">
         <div class="left"><p>Suitable for Everyone</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
         <div class="center"><img src="assets/img/main-benefits-full.png" alt="Bible Chat app - questions"></div>
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Access to Your Preferred Bible Version</p></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Your Deepest Questions</p></div>
+        
       </div>
       <div class="white benefit">
         <div class="left"><p>Learn More About Religion and Your Faith</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
         <div class="center"></div>
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Any of Your Deepest Questions</p></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Journal Your Thoughts, Questions, and Prayers</p></div>
       </div>
       <div class="dark benefit">
         <div class="left"><p>Get Truly Inspiring Guidance</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
         <div class="center"></div>
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Remember Your Thoughts, Questions, and Prayers</p></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Access to Your Preferred Bible Version</p></div>
       </div>
     </div>
 
@@ -66,14 +67,14 @@
         <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Access to Your Preferred Bible Version</p></div>
       </div>      
       <div class="dark benefit">
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Any of Your Deepest Questions</p></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Your Deepest Questions</p></div>
       </div>
       <img src="assets/img/main-benefits-full.png" alt="Bible Chat app - questions" id="main-benefits-mobile">
       <div class="white benefit">
         <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Truly Inspiring Guidance</p></div>
       </div>
       <div class="dark benefit">
-        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Remember Your Thoughts, Questions, and Prayers</p></div>
+        <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Journal Your Thoughts, Questions, and Prayers</p></div>
       </div>
       <div class="white benefit">
         <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Learn More About Religion and Your Faith</p></div>
@@ -85,14 +86,15 @@
     <div class="overlay">
       <div class="benefits">
         <div class="benefit">
-          <div class="left"><p>The Scripture No Longer Has Any Secrets</p></div>
+          <!-- <div class="left"><p>The Scripture No Longer Has Any Secrets</p></div> -->
+          <div class="left"><p>Explore The Word of God</p></div>
           <div class="center"></div>
-          <div class="right"><p>The Ultimate Religious Guidance</p></div>
+          <div class="right"><p>Receive Spiritual Guidance</p></div>
         </div>
         <div class="benefit">
           <div class="left"><p>Strengthen Your Faith</p></div>
           <div class="center"></div>
-          <div class="right"><p>Create Personalized Prayer</p></div>
+          <div class="right"><p>Create Personalized Prayers</p></div>
         </div>
         <div class="benefit">
           <div class="left"><p>Feed Your Soul</p></div>
@@ -101,8 +103,13 @@
         </div>
       </div>
 
-      <div class="blog-highlights">
-        <div class="blog-post">
+      <div class="blog-highlights container">
+
+        <div *ngFor="let post of blogPosts">
+          <app-blog-post-card [post]="post" class="top-blog-post"></app-blog-post-card>
+        </div>
+
+        <!-- <div class="blog-post">
           <div class="header">
             <p class="title">Blog title goes here</p>
             <a class="redirect">Read more</a>
@@ -113,15 +120,16 @@
           <div class="header">
             <p class="title">Blog title goes here</p>
             <a class="redirect">Read more</a>
+            
           </div>
           <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed ipsum eget velit lobortis mollis eget vel tortor. Praesent a tortor in neque ultrices imperdiet et id sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean consequat pellentesque aliquet.</p>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 
   <div class="bottom">
-    <h2>Explore your topics and interests <span class="white">through <span class="red">the eyes</span> of the bible</span></h2>
+    <h2>Explore any topics and interests <span class="white">through <span class="red">the lenses</span> of the bible</span></h2>
     <div class="screen-nav">
       <a *ngFor="let navLink of screenNavLinks; let i = index" [ngClass]="{'selected': navLink.selected === true}" (click)="onSelect(i)">{{ navLink.name }}</a>
     </div>
