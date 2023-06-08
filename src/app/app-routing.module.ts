@@ -11,7 +11,8 @@ import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms
 import { PrivacyComponent } from './static/privacy/privacy.component';
 import { EulaComponent } from './static/eula/eula.component';
 import { ContactComponent } from './static/contact/contact.component';
-import { LandingPageComponent } from './static/landing-page/landing-page.component';
+import { LandingPageComponent } from './static/landing-pages/landing-page-big/landing-page.component';
+import { LandingPageSmallComponent } from './static/landing-page-small/landing-page-small.component';
 
 const routes: Routes = [
   {
@@ -63,8 +64,12 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'landing',
+    path: 'landing-big',
     component: LandingPageComponent,
+  },
+  {
+    path: 'landing-small',
+    component: LandingPageSmallComponent,
   },
 ];
 

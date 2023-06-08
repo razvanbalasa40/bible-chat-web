@@ -92,33 +92,37 @@
             color: #FFFFFF;
           }
 
-          a#contact-button {
-            // margin-left: 430px;
-            width: 173px;
-            height: 64px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 16px;
-            border: none;
-            align-self: center;
-            margin-top: 46px;
-            transition: all 0.2s ease-in-out;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 32px;
-            padding: 16px 32px;
-            color: #25221C;
-
-            &:hover {
-              background: rgba(255, 255, 255, 0.7);
-            }
-          }
+          
         }
       }
 
       .nav-right.burger {
         display: none!important;
       }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  a#contact-button {
+    // margin-left: 430px;
+    width: 173px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    border: none;
+    align-self: center;
+    margin-top: 46px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 16px 32px;
+    color: #25221C;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.7);
     }
   }
 }

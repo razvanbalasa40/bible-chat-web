@@ -30,7 +30,8 @@ import { EulaComponent } from './static/eula/eula.component';
 import { TermsAndConditionsComponent } from './static/terms-and-conditions/terms-and-conditions.component';
 import { ContactComponent } from './static/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LandingPageComponent } from './static/landing-page/landing-page.component';
+import { LandingPageComponent } from './static/landing-pages/landing-page-big/landing-page.component';
+import { LandingPageSmallComponent } from './static/landing-page-small/landing-page-small.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { LandingPageComponent } from './static/landing-page/landing-page.compone
     TermsAndConditionsComponent,
     ContactComponent,
     LandingPageComponent,
+    LandingPageSmallComponent,
   ],
   imports: [
     BrowserModule,
