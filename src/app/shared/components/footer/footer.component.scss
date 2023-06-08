@@ -1,99 +1,109 @@
 @use "../../../styles/spacing";
 
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  // background: url("../../../../assets/img/rip-rotated.svg") bottom;
-  padding-top: spacing.$default-base-spacing * 4;
+.bottom-section {
+  min-height: 800px;
+  background-image: url("../../../../assets/img/doodles-overlay.png");
+  background-size: cover;
+  background-color: #F0EEE8;
+  background-repeat: no-repeat;
+  background-position: top;
 
-  .bottom-hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: spacing.$default-base-spacing * 4;
-    .col-left {
-      text-align: center;
+  .overlay {
+    min-height: 600px;
+    background-image: linear-gradient(to right, rgba(240,238,232,0), rgba(240,238,232,0.3), rgba(240,238,232,1), rgba(240,238,232,0.3), rgba(240,238,232,0));
 
-      img {
-        max-width: 200px;
+    .top {
+      min-height: 600px;
+      background-image: url("../../../../assets/img/ripped-dark-brown-bottom.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100% auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;    
+      
+      h2 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: -0.022em;
+        margin-top: 96px;
+
+        strong {
+          font-weight: 700;
+        }
       }
 
-      h1 {
-        margin-bottom: spacing.$default-base-spacing * 3;
+      #bottom-cta {
+        margin-top: 64px;
+        cursor: pointer;
       }
 
       p {
-        margin-bottom: spacing.$default-base-spacing * 4;
-      }
-
-    }
-
-    .col-right {
-      margin-left: auto;
-
-      h2 {
-        text-decoration: underline;
-      }
-
-      ul {
-        padding: 0;
-
-        li {
-          list-style: none;
-          padding-left: spacing.$default-base-spacing;
-
-          &:hover {
-            text-decoration: underline;
-            cursor: pointer;
-          }
-        }
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+        margin-top: 32px;
       }
     }
   }
-
-  .bottom-section {
+  
+  .bottom {
+    height: 300px;
+    background-color: #95896E;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    flex-wrap: wrap;
+    a {
+      cursor: pointer;
+    }
+  }
+}
 
-    nav {
-      margin-left: auto;
+@media (max-width: 1024px) {
+  .bottom-section {
+    .overlay {
+      .top {
+        padding: 0 32px;
 
-      ul {
-        display: block;
-        margin: 0;
-        margin-top: 8px;
+        h2 {
+          font-size: 24px;
+          font-weight: 600;
+        }
 
-        li {
-          display: inline-block;
-          padding-left: spacing.$default-base-spacing * 2;
+        #bottom-cta {
+          width: 220px;
+          margin-top: 32px;
+        }
+      }
+    }
 
-          &:hover {
-            text-decoration: underline;
-            cursor: pointer;
-          }
+    .bottom {
+      height: 200px;
+      padding: 20px 10px;
+
+      a {
+        img {
+          width: 48px;
+          height: 48px;
         }
       }
     }
   }
 }
 
-@media (max-width: 1024px) {
-  footer {
-  
-    .bottom-hero {
-      flex-direction: column;
-    }
+@media (max-width: 768px) {
 
-    .col-right {
-      margin-top: 24px;
-      margin-left: 0!important;
-
-      ul {
-        display: block;
-        li {
-          display: inline-block;
-        }
+  .bottom-section {
+    .overlay {
+      .top {
+        background-size: auto 64px;
       }
     }
   }
