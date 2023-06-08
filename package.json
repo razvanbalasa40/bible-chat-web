@@ -23,6 +23,7 @@
     "angular-gtag": "^1.0.4",
     "apicache": "^1.6.3",
     "bootstrap": "^5.2.3",
+    "ngx-lottie": "^10.0.0",
     "rxjs": "~7.8.0",
     "sitemap": "^7.1.1",
     "tslib": "^2.3.0",

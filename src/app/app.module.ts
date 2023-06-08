@@ -32,6 +32,11 @@ import { ContactComponent } from './static/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LandingPageComponent } from './static/landing-pages/landing-page-big/landing-page.component';
 import { LandingPageSmallComponent } from './static/landing-page-small/landing-page-small.component';
+import { LottieModule } from 'ngx-lottie';
+
+export function playerFactory() {
+  return import('lottie-web');
+}
 
 @NgModule({
   declarations: [
@@ -63,6 +68,7 @@ import { LandingPageSmallComponent } from './static/landing-page-small/landing-p
     CommonModule,
     GtagModule.forRoot({ trackingId: 'G-JW3BEGLW0Y', trackPageviews: true }),
     ReactiveFormsModule,
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],

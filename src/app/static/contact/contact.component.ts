@@ -11,6 +11,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-contact',
@@ -19,8 +20,14 @@ import {
 })
 export class ContactComponent implements OnInit {
   private builder: FormBuilder = inject(FormBuilder);
-  public contactForm: FormGroup;
   private firestore: Firestore = inject(Firestore);
+  public contactForm: FormGroup;
+  public sentMessage = false;
+  public sending = false;
+  public lottieSendingOptions: AnimationOptions = {
+    path: 'assets/lottie/sending-message.json',
+    loop: false,
+  };
 
   ngOnInit() {
     this.contactForm = this.builder.group({
@@ -32,6 +39,9 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+    this.sentMessage = true;
+    this.sending = true;
+
     addDoc(collection(this.firestore, 'mails'), {
       to: 'hello@thebiblechat.app',
       from: this.contactForm.value.Email,
@@ -46,7 +56,9 @@ export class ContactComponent implements OnInit {
       },
     })
       .then((documentReference: DocumentReference) => {
-        // the documentReference provides access to the newly created document
+        setTimeout(() => {
+          this.sending = false;
+        }, 2000);
       })
       .catch((error) => {
         console.log(error);
