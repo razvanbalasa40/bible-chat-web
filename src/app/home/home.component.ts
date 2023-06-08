@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ posts }) => {
-      this.blogPosts = posts;
+      this.blogPosts = [posts[0], posts[2]];
     });
   }
 
