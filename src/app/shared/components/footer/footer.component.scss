@@ -2,7 +2,7 @@
 
 .bottom-section {
   min-height: 800px;
-  background-image: url("../../../../assets/img/doodles-overlay.png");
+  background-image: url("../../../../assets/img/doodles-overlay.webp");
   background-size: cover;
   background-color: #F0EEE8;
   background-repeat: no-repeat;
@@ -80,6 +80,7 @@
         #bottom-cta {
           width: 220px;
           margin-top: 32px;
+          height: auto;
         }
       }
     }

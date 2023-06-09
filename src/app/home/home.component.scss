@@ -227,7 +227,7 @@
 
   .middle {
     min-height: 800px;
-    background-image: url("../../assets/img/doodles-overlay.png"), url("../../assets/img/ripped-brown-bottom.png"), linear-gradient(to top, rgba(240,238,232,1), rgba(240,238,232,0.8));
+    background-image: url("../../assets/img/doodles-overlay.webp"), url("../../assets/img/ripped-brown-bottom.png"), linear-gradient(to top, rgba(240,238,232,1), rgba(240,238,232,0.8));
     background-size: cover, 100% auto, 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: top, bottom;
@@ -383,13 +383,15 @@
       gap: 44px;
       margin-top: 64px;
       height: auto;
-      a {
+      button {
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
         line-height: 32px;
         padding: 10px;
         cursor: pointer;
+        border: none;
+        background-color: transparent;
         border-bottom: 4px solid transparent;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -431,7 +433,7 @@
 
 .bottom-section {
   min-height: 800px;
-  background-image: url("../../assets/img/doodles-overlay.png");
+  background-image: url("../../assets/img/doodles-overlay.webp");
   background-size: cover;
   background-color: #F0EEE8;
   background-repeat: no-repeat;

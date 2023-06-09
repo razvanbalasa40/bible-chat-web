@@ -1,7 +1,7 @@
 <div class="blog-post">
   <div class="header">
     <p class="title">{{ post?.title }}</p>
-    <a class="redirect" [href]="'https://blog.thebiblechat.app/' + post?.slug">Read more</a>
+    <a class="redirect" [href]="'https://blog.thebiblechat.app/' + post?.slug">Read article</a>
   </div>
   <p class="content">{{(post?.content | slice:0:250) + '...' }}</p>
 </div>

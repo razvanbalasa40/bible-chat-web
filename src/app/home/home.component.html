@@ -36,9 +36,8 @@
     <div class="benefits desktop">
       <div class="dark benefit first">
         <div class="left"><p>Suitable for Everyone</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
-        <div class="center"><img src="assets/img/main-benefits-full.webp" alt="Bible Chat app - questions"></div>
+        <div class="center"><img src="assets/img/main-benefits-full.webp" alt="Bible Chat app - questions" width="416px" height="744px"></div>
         <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Your Deepest Questions</p></div>
-        
       </div>
       <div class="white benefit">
         <div class="left"><p>Learn More About Religion and Your Faith</p><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"></div>
@@ -62,7 +61,7 @@
       <div class="dark benefit">
         <div class="right"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Answers to Your Deepest Questions</p></div>
       </div>
-      <img src="assets/img/main-benefits-full.webp" alt="Bible Chat app - questions" id="main-benefits-mobile">
+      <img src="assets/img/main-benefits-full.webp" alt="Bible Chat app - questions" id="main-benefits-mobile" width="318.7px" height="570px">
       <div class="white benefit">
         <div class="left"><img src="assets/img/red-question-mark.png" alt="Red question mark" width="32px" height="32px"><p>Get Truly Inspiring Guidance</p></div>
       </div>
@@ -108,7 +107,7 @@
   <div class="bottom">
     <h2>Explore any topics and interests <span class="white">through <span class="red">the lenses</span> of the bible</span></h2>
     <div class="screen-nav">
-      <a *ngFor="let navLink of screenNavLinks; let i = index" [ngClass]="{'selected': navLink.selected === true}" (click)="onSelect(i)">{{ navLink.name }}</a>
+      <button *ngFor="let navLink of screenNavLinks; let i = index" [ngClass]="{'selected': navLink.selected === true}" (click)="onSelect(i)">{{ navLink.name }}</button>
     </div>
 
     <div class="phone">
@@ -117,3 +116,5 @@
     </div>
   </div>
 </div>
+
+<app-footer></app-footer>
