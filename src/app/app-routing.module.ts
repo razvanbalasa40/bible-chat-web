@@ -17,51 +17,46 @@ import { LandingPageSmallComponent } from './static/landing-page-small/landing-p
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: '',
-        component: HomeComponent,
-        resolve: {
-          posts: HomeResolver,
-        },
-      },
-      // {
-      //   path: 'blog',
-      //   component: BlogComponent,
-      //   children: [
-      //     {
-      //       path: '',
-      //       component: BlogListComponent,
-      //       resolve: {
-      //         posts: BlogPostsResolver,
-      //       },
-      //     },
-      //     {
-      //       path: ':blogPostSlug',
-      //       component: BlogPostComponent,
-      //       resolve: {
-      //         post: BlogPostResolver,
-      //       },
-      //     },
-      //   ],
-      // },
-      {
-        path: 'contact',
-        component: ContactComponent,
-      },
-      {
-        path: 'terms-and-conditions',
-        component: TermsAndConditionsComponent,
-      },
-      {
-        path: 'privacy-policy',
-        component: PrivacyComponent,
-      },
-      {
-        path: 'eula',
-        component: EulaComponent,
-      },
-    ],
+    component: HomeComponent,
+    resolve: {
+      posts: HomeResolver,
+    },
+  },
+  // {
+  //   path: 'blog',
+  //   component: BlogComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: BlogListComponent,
+  //       resolve: {
+  //         posts: BlogPostsResolver,
+  //       },
+  //     },
+  //     {
+  //       path: ':blogPostSlug',
+  //       component: BlogPostComponent,
+  //       resolve: {
+  //         post: BlogPostResolver,
+  //       },
+  //     },
+  //   ],
+  // },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'terms-and-conditions',
+    component: TermsAndConditionsComponent,
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyComponent,
+  },
+  {
+    path: 'eula',
+    component: EulaComponent,
   },
   {
     path: 'landing-big',
